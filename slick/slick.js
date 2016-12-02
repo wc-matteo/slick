@@ -1458,7 +1458,7 @@
 
         function loadImages(imagesScope) {
 
-            $('img[data-lazy]', imagesScope).each(function() {
+            $(imagesScope).find('img[data-lazy]').addBack('img[data-lazy]').each(function() {
 
                 var image = $(this),
                     imageSource = $(this).attr('data-lazy'),
